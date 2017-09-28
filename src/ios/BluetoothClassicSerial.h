@@ -54,7 +54,7 @@
  bluetoothClassicSerial.subscribeDisconnect(successCallback, failCallback);
  @endcode
  */
-- (void)subscribeDisconnect:(CDVInvokedUrlCommand *)command;
+//- (void)subscribeDisconnect:(CDVInvokedUrlCommand *)command;
 
 
 /*!
@@ -197,8 +197,8 @@
 - (void)clearDeviceDiscoveredListener:(CDVInvokedUrlCommand *)command;
 
 
-- (void)setDisconnectedListener:(CDVInvokedUrlCommand *)command;
-- (void)clearDisconnectedListener:(CDVInvokedUrlCommand *)command;
+// - (void)setDisconnectedListener:(CDVInvokedUrlCommand *)command;
+// - (void)clearDisconnectedListener:(CDVInvokedUrlCommand *)command;
 
 /*!
  @brief Clear the input stream read buffer

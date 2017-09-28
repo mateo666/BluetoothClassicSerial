@@ -633,14 +633,14 @@
 }
 
 - (void)accessoryDisconnected:(NSNotification *)notification {
-    if self.accessory != nil{
+    if (self.accessory != nil){
         EAAccessory *accessory = [[notification userInfo] objectForKey:EAAccessoryKey];
-        if accessory != nil{
-            if accessory.connectionID == self.accessory.connectionID{
+        if (accessory != nil){
+            if (accessory.connectionID == self.accessory.connectionID){
 
                 [self closeCommunicationSessions];
                 
-                if self.disconnectCallbackID != nil{
+                if (self.disconnectCallbackID != nil){
                     NSArray *accessoryDetailsArray = [self accessoryDetails:accessory].copy;
                     CDVPluginResult *pluginResult = nil;
                     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray:accessoryDetailsArray];
